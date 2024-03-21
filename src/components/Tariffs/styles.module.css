@@ -1,0 +1,276 @@
+.card {
+    /* max-width: 187px; */
+    width: 100%;
+    max-height: max-content;
+    padding: 3.1vw 1.9vw 1.8vw;
+    border-radius: 1.4vw;
+    border: 2px solid #D3D6DD;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.4vw;
+
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    background: rgba(1, 185, 197, 0.05);
+}
+
+.card:last-child {
+    max-width: 40.6vw;
+    max-height: 125px;
+    padding: 3.93% 8.88% 4.27% 5.30%;
+    text-align: left;
+
+    flex-direction: row;
+    align-items: center;
+    gap: 1.4vw;
+    grid-column: 1 / span 3;
+    margin-top: 1.9vw;
+}
+
+.card__sale {
+    width: 4.86vw;
+    height: 4.86vw;
+    background-image: url('../../assets/Star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: -2.4vw;
+    right: 0;
+}
+
+.sale {
+    color: #fff;
+    font-size: 1.3vw;
+}
+
+.card__name {
+    color: #687078;
+    font-family: 'Bebas Neue Cyrillic';
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 3px;
+}
+
+.card__prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.discount__price {
+    color: #2D3242;
+    font-family: 'PT-Root-UI';
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: -2px;
+    padding-left: 5px;
+}
+
+.price {
+    color: #95979F;
+    font-family: 'PT-Root-UI';
+    font-size: 1.6vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-decoration: line-through;
+}
+
+.timerExpired {
+    color: #2D3242;
+    font-family: 'PT-Root-UI';
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    text-decoration: none;
+}
+
+.text {
+    color: #2F4353;
+    font-family: 'PT-Root-UI';
+    font-size: 1.1vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    max-width: 11.1vw;
+}
+
+.selected {
+    border: 2px solid #01B9C5;
+    background: rgba(1, 185, 197, 0.05);
+}
+
+.card__discount {
+    width: 14.6vw;
+    padding: 1.8vw 1.5vw 1.4vw 1.8vw;
+    border-radius: 20px;
+    border: 2px solid #E7EAF1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    gap: 1.6vw;
+    text-align: center;
+}
+
+.card__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.03vw;
+    border-bottom: 1px solid #E7EAF1;
+    padding-bottom: 1.3vw;
+}
+
+.card__info input {
+    cursor: pointer;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.discount {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.price__discount {
+    color: #2D3242;
+    font-family: 'PT-Root-UI';
+    font-size: 3.2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.discount__sale {
+    width: 3.5vw;
+    height: 3.5vw;
+    background-image: url('../../assets/Star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -1.25vw;
+    top: -1vw;
+}
+
+
+@media (max-width: 376px) {
+
+    .card,
+    .card:last-child {
+        max-width: 335px;
+        width: 100%;
+        max-height: 140px;
+        padding: 9.6vw 10.6vw 6.9vw 6.4vw;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-auto-rows: minmax(50%, auto);
+        grid-column: 1 / span 1;
+        align-items: start;
+        text-align: left;
+        border-radius: 5.3vw;
+        margin-top: 0;
+    }
+
+    .card__name {
+        font-size: 6.4vw;
+        margin-bottom: 0;
+    }
+
+    .card__sale {
+        width: 13.3vw;
+        height: 13.3vw;
+        top: 1vw;
+        right: 2.4vw;
+    }
+
+    .text {
+        max-width: 27.2vw;
+        font-size: 3.7vw;
+    }
+
+    .card__prices {
+       display: grid;
+       justify-items: end;
+       justify-content: end;
+    }
+
+    .price {
+        font-size: 5.3vw;
+        text-align: right;
+    }
+
+
+    .timerExpired {
+        font-size: 11.7vw;
+    }
+
+    .discount__price {
+        font-size: 11.7vw;
+        width: 100%;
+    }
+
+    .card__discount {
+        width: 100%;
+        height: 133px;
+        gap: 5vw;
+        padding: 6.4vw 5.3vw 4.8vw;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-column: 1 / span 1;
+    }
+
+    .discount__sale {
+        top: -9.3vw;
+        right: 27.7vw;
+        width: 10.6vw;
+        height: 10.6vw;
+    }
+
+    .sale {
+        font-size: 3.5vw;
+    }
+
+    .price__discount {
+        font-size: 11.3vw;
+        margin-top: -25px;
+    }
+
+    .card__info {
+        width: 68vw;
+        display: block;
+        border: none;
+    }
+
+    .info {
+        align-items: flex-start;
+    }
+}

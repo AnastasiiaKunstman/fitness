@@ -1,0 +1,34 @@
+.button {
+    border-radius: 4.1vw;
+    width: max-content;
+    border: none;
+    background: #FD4D35;
+    padding: 1.9vw 6.9vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+
+    color: #FFF;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4vw;
+    text-transform: uppercase;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 376px) {
+   .button{
+    width: 100%;
+    font-size: 5.3vw;
+    padding: 5.3vw 9vw 5.9vw;
+    text-transform: none;
+    border-radius: 8vw;
+   } 
+}

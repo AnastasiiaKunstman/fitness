@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url(./BebasNeue-Regular.woff) format('woff'),
+        url(./BebasNeue-Regular.woff2) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT-Root-UI';
+    src: url(./PT-Root-UI_Regular.woff) format('woff'),
+        url(./PT-Root-UI_Regular.woff2) format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Cyrillic';
+    src: url(./bebas-neue-cyrillic1.woff) format('woff'),
+        url(./bebas-neue-cyrillic1.woff2) format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}

@@ -1,0 +1,153 @@
+.popup__overley {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    width: 52vw;
+    background: #F5F7F7;
+    color: #000;
+    padding: 2.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    position: relative;
+    max-height: 100vh;
+}
+
+.hotoffer {
+    display: inline-flex;
+    padding: 0.3vw 0.7vw 0.4vw 0.7vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+    background: #01B9C5;
+
+    color: #FFF;
+    font-family: 'PT-Root-UI';
+    font-size: 1.1vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.32px;
+
+    position: absolute;
+    top: 0;
+    left: 2.9vw;
+}
+
+.popup img {
+    position: absolute;
+    right: 1.4vw;
+    top: 1.4vw;
+    cursor: pointer;
+}
+
+.title {
+    color: #12191D;
+    font-family: 'Rubik';
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-top: 2vw;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55vw;
+}
+
+.subtitle {
+    color: #12191D;
+    font-family: 'PT-Root-UI';
+    font-size: 1.6vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+.subtitle__sale {
+    font-size: 1.6vw;
+    padding: 0.8vw 1.9vw 1.1vw 2vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7vw;
+    border-radius: 30px;
+    border: 1.5px solid #01B9C5;
+}
+
+.cards__section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4vw;
+    margin-bottom: 0.7vw;
+    font-size: 1.6vw;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    gap: 1.4vw;
+}
+
+.highlighted {
+    color: #01B9C5;
+}
+
+.selection {
+    color: #2D3242;
+    font-family: 'Rubik';
+}
+
+@media (max-width: 376px) {
+    .popup {
+        width: 335px;
+        height: 778px;
+        padding: 5.3vw;
+        gap: 6.9vw;
+    }
+
+    .hotoffer {
+        font-size: 3.7vw;
+        left: 0;
+    }
+
+    .title {
+        max-width: 65vw;
+        font-size: 6.4vw;
+        margin-top: 5.8vw;
+    }
+
+    .subtitle {
+        font-size: 4vw;
+    }
+
+    .subtitle__sale {
+        display: block;
+        padding: 3.2vw 5.8vw 3.7vw 6.4vw;
+        font-size: 4vw;
+    }
+
+    .cards__section {
+        font-size: 4vw;
+    }
+    
+    .cards {
+        flex-direction: column;
+    }
+}

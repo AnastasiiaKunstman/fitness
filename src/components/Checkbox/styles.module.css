@@ -1,0 +1,51 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.8vw;
+    max-width: 31.52vw;
+    margin-bottom: 3.47vw;
+}
+
+.checkbox input {
+    width: 1.6vw;
+    height: 1.6vw;
+    border-radius: 5px;
+}
+
+.checkbox__text {
+    color: #818798;
+    font-family: 'PT-Root-UI';
+    font-size: 1.1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.checkbox__text a {
+    color: #2D97F9;
+    font-family: 'PT-Root-UI';
+    font-size: 1.1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (max-width: 376px) {
+    .checkbox {
+        max-width: 84vw;
+        margin-bottom: 5.8vw;
+        gap: 3.2vw;
+    }
+
+    .checkbox__text, .checkbox__text a {
+        font-size: 4.2vw;
+    }
+
+    .checkbox input {
+        width: 6.4vw;
+        height: 6.4vw;
+    }
+    
+}

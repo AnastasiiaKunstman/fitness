@@ -1,0 +1,142 @@
+main {
+    width: 100%;
+    flex-grow: 1;
+    height: 100%; 
+}
+
+.main {
+    height: 100%; 
+    padding: 4.7vw 11.9vw 7.4vw;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5.5vw;
+    align-items: start;
+}
+
+.main__title {
+    margin-top: 1.9vw;
+    font-family: 'Rubik';
+    color: #2D3242;
+    text-align: center;
+    font-size: 2.7vw;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.section {
+    max-width: 41vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.img {
+    width: 30vw;
+    max-height: 715px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url('../../assets/man.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.gradient {
+    width: 100%;
+    height: 12vh;
+    background: linear-gradient(1deg, #F5F7F7 0%, rgba(245, 247, 247, 0.00) 100%);
+}
+
+.card_section {
+    width: 100%;
+    max-height: max-content;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.card_section p {
+    grid-column: 1 / span 3;
+}
+
+.subtitle {
+    margin: 0.9vw 0 1.8vw;
+    color: #2D3242;
+    font-family: 'PT-Root-UI';
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.text {
+    color: #818798;
+    font-family: 'PT-Root-UI';
+    font-size: 0.97vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 2vw;
+}
+
+@media (max-width: 376px) {
+    main {
+        padding: 5.3vw;
+    }
+
+    .main {
+        margin-top: 5.3vw;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 2.6vw;
+        padding: 0;
+    }
+
+    .img {
+        max-width: 277px;
+        width: 100%;
+        height: 442px;
+        margin: auto;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .main__title {
+        width: 89vw;
+        font-size: 6.4vw;
+        letter-spacing: 0.24px;
+    }
+
+    .section {
+        max-width: 335px;
+        width: 100%;
+        height: max-content;
+        gap: 3.2vw;
+    }
+
+    .card_section {
+        height: auto;
+        grid-template-columns: 1fr;
+        justify-content: flex-start;
+        gap: 2.6vw;
+    }
+
+    .subtitle {
+        max-width: 75.7vw;
+        margin-bottom: 6.4vw;
+        font-size: 3.7vw;
+    }
+
+    .text {
+        display: none;
+    }
+}
