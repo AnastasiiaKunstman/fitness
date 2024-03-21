@@ -12,7 +12,7 @@ function App(): JSX.Element {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
-  const [counter, setCounter] = useState({ minutes: 0, seconds: 35 });
+  const [counter, setCounter] = useState({ minutes: 2, seconds: 0 });
   const [isRed, setIsRed] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isTimerExpired, setIsTimerExpired] = useState<boolean>(false);
