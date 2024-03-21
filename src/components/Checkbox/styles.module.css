@@ -32,7 +32,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 525px) {
+@media screen and (max-width: 525px) and (min-width: 377px) {
     .checkbox {
         max-width: 84vw;
         margin-bottom: 5.8vw;
@@ -48,4 +48,10 @@
         height: 6.4vw;
     }
     
+}
+
+@media screen and (max-width: 376px) and (min-width: 320px) {
+    .checkbox__text, .checkbox__text a {
+        font-size: 4.2vw;
+    }
 }
