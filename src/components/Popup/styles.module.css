@@ -114,12 +114,12 @@
     font-family: 'Rubik';
 }
 
-@media (max-width: 376px) {
+@media (max-width: 525px) {
     .popup {
-        width: 335px;
+        width: 64vw;
         height: 778px;
-        padding: 5.3vw;
-        gap: 6.9vw;
+        padding: 3.8vw;
+        gap: 4.9vw;
     }
 
     .hotoffer {

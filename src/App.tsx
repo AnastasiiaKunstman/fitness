@@ -5,14 +5,20 @@ import Main from './components/Main/Main';
 import Popup from './components/Popup/Popup';
 import { Tariff } from './models/models';
 import { BASE_API } from './utils/constans';
-import './index.css'
+import './index.css';
+
+interface CounterState {
+  minutes: number;
+  seconds: number;
+}
+
 function App(): JSX.Element {
   const [tariffs, setTariffs] = useState<Tariff[]>([]);
   const [discountTariffs, setDiscountTariffs] = useState<Tariff[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
-  const [counter, setCounter] = useState({ minutes: 2, seconds: 0 });
+  const [counter, setCounter] = useState<CounterState>({ minutes: 2, seconds: 0 });
   const [isRed, setIsRed] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState<boolean>(true);
   const [isTimerExpired, setIsTimerExpired] = useState<boolean>(false);
@@ -22,28 +28,7 @@ function App(): JSX.Element {
     setSelectedTariff(tariff);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const totalSeconds = counter.minutes * 60 + counter.seconds;
-
-      if (totalSeconds <= 0) {
-        setIsPopupOpen(true)
-        setIsVisible(false);
-        setIsRed(false);
-        setIsTimerExpired(true);
-        return;
-      } else if (totalSeconds === 30) {
-        setIsRed(true);
-      }
-
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60 - 1;
-      setCounter({ minutes, seconds });
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, [counter, setIsPopupOpen]);
-
+  const handleClosePopup = () => setIsPopupOpen(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -65,7 +50,34 @@ function App(): JSX.Element {
     fetchData();
   }, []);
 
-  const handleClosePopup = () => setIsPopupOpen(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const totalSeconds = counter.minutes * 60 + counter.seconds - 1;
+
+      if (totalSeconds <= 0) {
+        setIsPopupOpen(true);
+        setIsVisible(false);
+        setIsRed(false);
+        setIsTimerExpired(true);
+        return;
+      } else if (totalSeconds === 30) {
+        setIsRed(true);
+      }
+
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      setCounter({
+        minutes,
+        seconds,
+      });
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [counter]);
+
+  useEffect(() => {
+    setCounter({ minutes: 2, seconds: 0 });
+  }, []);
 
   return (
     <>

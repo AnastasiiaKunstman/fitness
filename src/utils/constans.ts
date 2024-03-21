@@ -16,8 +16,8 @@ export const MOBILE_CARDTEXT = [
 
 export const TARIFFPRICE = [
     "999₽",
-    "1690₽",
-    "5990₽",
+    "1 690₽",
+    "5 990₽",
     "18 990₽"
 ];
 

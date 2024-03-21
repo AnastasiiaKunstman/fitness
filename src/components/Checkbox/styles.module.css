@@ -32,7 +32,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 525px) {
     .checkbox {
         max-width: 84vw;
         margin-bottom: 5.8vw;
@@ -40,7 +40,7 @@
     }
 
     .checkbox__text, .checkbox__text a {
-        font-size: 4.2vw;
+        font-size: 3vw;
     }
 
     .checkbox input {

@@ -19,7 +19,7 @@ header {
     text-align: right;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 525px) {
     header {
         padding: 2.1vw 4.2vw;
     }

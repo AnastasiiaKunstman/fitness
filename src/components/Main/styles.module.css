@@ -88,7 +88,15 @@ main {
     margin-top: 2vw;
 }
 
-@media (max-width: 376px) {
+@media screen and (max-width: 768px) and (min-width: 376px) {
+    .main {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+    }    
+}
+
+@media (max-width: 525px) {
     main {
         padding: 5.3vw;
     }
@@ -96,7 +104,9 @@ main {
     .main {
         margin-top: 5.3vw;
         grid-template-columns: 1fr;
+        grid-template-rows: none;
         align-items: center;
+        justify-items: center;
         gap: 2.6vw;
         padding: 0;
     }
@@ -133,7 +143,7 @@ main {
     .subtitle {
         max-width: 75.7vw;
         margin-bottom: 6.4vw;
-        font-size: 3.7vw;
+        font-size: 2.6vw;
     }
 
     .text {

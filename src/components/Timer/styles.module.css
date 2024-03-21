@@ -40,18 +40,23 @@
     }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 525px) {
     .timer__block {
         width: 37.3vw;
         height: 64px;
     }
 
     .timer {
-        font-size: 10.6vw;
+        font-size: 7.6vw;
+    }
+
+    .timer__text {
+        justify-content: center;
+        gap: 5.6vw;
     }
 
     .timer__text p {
-        font-size: 3.7vw;
+        font-size: 2.6vw;
         font-weight: 500;
     }
 }
