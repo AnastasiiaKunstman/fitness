@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styles from './styles.module.css';
 import { Tariff } from '../../models/models';
-import { CARDTEXT, MOBILE_CARDTEXT } from '../../utils/constans';
 
 interface TariffProps {
   id: number;
