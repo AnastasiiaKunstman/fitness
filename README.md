@@ -30,3 +30,4 @@ npm run dev
 ```
 
 ## Ссылка на проект:
+https://fitness-henna.vercel.app/
