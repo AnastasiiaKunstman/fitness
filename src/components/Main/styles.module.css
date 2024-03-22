@@ -114,6 +114,11 @@ main {
         justify-items: center;
     }
 
+    .main__title {
+        width: 89vw;
+        text-align: left;
+    }
+
     .img {
         max-width: 277px;
         width: 100%;
