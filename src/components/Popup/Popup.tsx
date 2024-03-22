@@ -66,7 +66,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, discountTariffs, onClose, selecte
                         ))}
                     </div>
                 </div>
-                <Button disabled={!isButtonActive}>Начать тренироваться</Button>
+                <Button buttonClass={styles.popup__button} disabled={!isButtonActive}>Начать тренироваться</Button>
             </div>
         </div>
     );

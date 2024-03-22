@@ -12,9 +12,9 @@ header {
 .title {
     color: #2D3242;
     font-family: 'PT-Root-UI';
-    font-size: 2vw;
+    font-size: clamp(16px, 2vw, 30px);
     font-style: normal;
-    font-weight: 700;
+    font-weight: clamp(500, 700, 700);
     line-height: 1.3;
     text-align: right;
 }
@@ -22,10 +22,5 @@ header {
 @media (max-width: 525px) {
     header {
         padding: 2.1vw 4.2vw;
-    }
-
-    .title {
-        font-size: 4.2vw;
-        font-weight: 500;
     }
 }

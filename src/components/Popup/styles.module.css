@@ -34,7 +34,7 @@
 
     color: #FFF;
     font-family: 'PT-Root-UI';
-    font-size: 1.1vw;
+    font-size: clamp(14px, 1.1vw, 16px);
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
@@ -55,7 +55,7 @@
 .title {
     color: #12191D;
     font-family: 'Rubik';
-    font-size: 2vw;
+    font-size: clamp(24px, 2vw, 30px);
     font-style: normal;
     font-weight: 700;
     line-height: 130%;
@@ -74,14 +74,14 @@
 .subtitle {
     color: #12191D;
     font-family: 'PT-Root-UI';
-    font-size: 1.6vw;
+    font-size: clamp(15px, 1.6vw, 24px);
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
 }
 
 .subtitle__sale {
-    font-size: 1.6vw;
+    font-size: clamp(15px, 1.6vw, 24px);
     padding: 0.8vw 1.9vw 1.1vw 2vw;
     justify-content: center;
     align-items: center;
@@ -96,13 +96,13 @@
     flex-direction: column;
     gap: 1.4vw;
     margin-bottom: 0.7vw;
-    font-size: 1.6vw;
+    font-size: clamp(15px, 1.6vw, 24px);
 }
 
 .cards {
     width: 100%;
-    display: flex;
-    gap: 1.4vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .highlighted {
@@ -112,6 +112,32 @@
 .selection {
     color: #2D3242;
     font-family: 'Rubik';
+}
+
+.popup__button {
+    border-radius: 30px;
+    max-width: 310px;
+    width: 100%;
+    border: none;
+    background: #FD4D35;
+    padding: 20px 34px 22px;
+    cursor: pointer;
+
+    color: #FFF;
+    font-family: 'Rubik';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: none;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 526px) {
+    .cards {
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+        gap: 6px;
+    }
 }
 
 @media (max-width: 525px) {
@@ -124,31 +150,20 @@
     }
 
     .hotoffer {
-        font-size: 3.7vw;
         left: 0;
     }
 
     .title {
         max-width: 65vw;
-        font-size: 4.5vw;
         margin-top: 5.8vw;
         text-align: center;
-    }
-
-    .subtitle {
-        font-size: 2.8vw;
     }
 
     .subtitle__sale {
         display: block;
         padding: 3.2vw 5.8vw 3.7vw 6.4vw;
-        font-size: 2.8vw;
     }
 
-    .cards__section {
-        font-size: 2.8vw;
-    }
-    
     .cards {
         flex-direction: column;
     }

@@ -52,10 +52,10 @@ function App(): JSX.Element {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const totalSeconds = counter.minutes * 60 + counter.seconds - 1;
+      const totalSeconds = counter.minutes * 60 + counter.seconds;
 
       if (totalSeconds <= 0) {
-        setIsPopupOpen(true);
+        setIsPopupOpen(true)
         setIsVisible(false);
         setIsRed(false);
         setIsTimerExpired(true);
@@ -65,18 +65,15 @@ function App(): JSX.Element {
       }
 
       const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60;
-      setCounter({
-        minutes,
-        seconds,
-      });
+      const seconds = totalSeconds % 60 - 1;
+      setCounter({ minutes, seconds });
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, [counter]);
-
+  }, [counter, setIsPopupOpen, setIsVisible, setIsRed, setIsTimerExpired]);
+  
   useEffect(() => {
-    setCounter({ minutes: 2, seconds: 0 });
+    setCounter({ minutes: 1, seconds: 59 });
   }, []);
 
   return (

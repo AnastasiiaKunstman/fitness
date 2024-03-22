@@ -1,17 +1,14 @@
 .button {
-    border-radius: 4.1vw;
+    border-radius: 60px;
     width: max-content;
     border: none;
     background: #FD4D35;
-    padding: 1.9vw 6.9vw;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5vw;
+    padding: 28px 100px;
     cursor: pointer;
 
     color: #FFF;
     font-family: 'Rubik';
-    font-size: 1.4vw;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.4vw;
@@ -23,12 +20,8 @@
     cursor: not-allowed;
 }
 
-@media screen and (max-width: 525px) and (min-width: 320px) {
-    .button{
-    width: 100%;
-    font-size: 5.3vw;
-    padding: 5.3vw 9vw 5.9vw;
-    text-transform: none;
-    border-radius: 8vw;
-   } 
+@media screen and (max-width: 768px) and (min-width: 320px) {
+    .button {
+        width: 100%;
+    }
 }

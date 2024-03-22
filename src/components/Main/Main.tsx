@@ -63,7 +63,7 @@ const Main: React.FC<MainProps> = ({ tariffs, isVisible, isTimerExpired, handleT
                     <p className={styles.subtitle}>Следуя плану на 3 месяца, люди получают в 2 раза лучший результат, чем за 1 месяц</p>
                     <>
                         <Checkbox onChange={handleCheckboxChange} />
-                        <Button disabled={!isButtonActive}>Купить</Button>
+                        <Button buttonClass={styles.button} disabled={!isButtonActive}>Купить</Button>
                     </>
                     <p className={styles.text}>{USERAGREEMENT}</p>
                 </div>
