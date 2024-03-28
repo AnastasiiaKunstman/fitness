@@ -1,5 +1,5 @@
 .card {
-    max-height: 261px;
+    /* max-height: 261px; */
     height: 100%;
     padding: 3.1vw 1.9vw 1.8vw;
     border-radius: 20px;
@@ -30,13 +30,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 18px;
+    gap: 30px;
     grid-column: 1 / span 3;
 }
 
 .card__sale {
-    width: 4.9vw;
-    height: 4.9vw;
+    width: 70px;
+    height: 70px;
     background-image: url('../../assets/Star.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -45,7 +45,7 @@
     align-items: center;
 
     position: absolute;
-    top: -2.4vw;
+    top: -35px;
     right: 0;
 }
 
@@ -209,6 +209,7 @@
         justify-items: stretch;
         text-align: left;
         margin-top: 0;
+        gap: 0;
     }
 
     .card:not(:last-child) {

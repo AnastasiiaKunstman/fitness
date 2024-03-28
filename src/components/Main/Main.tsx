@@ -39,9 +39,7 @@ const Main: React.FC<MainProps> = ({ tariffs, isVisible, isTimerExpired, handleT
                 Выберите подходящий тарифный план
             </h2>
             <div className={styles.main}>
-                <div className={styles.img}>
-                    <div className={styles.gradient}></div>
-                </div>
+                <div className={styles.img} />
                 <div className={styles.section}>
                     <div className={styles.card_section}>
                         {tariffs.map((tariff, index) => (
