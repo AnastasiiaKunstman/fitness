@@ -15,6 +15,7 @@ body, #root {
   font-family: 'Bebas Neue', 'PT-Root-UI', 'Bebas Neue Cyrillic', sans-serif;
   color: #2D3242;
   margin: 0 auto;
+  background-color: #F5F7F7;
 }
 
 .loading {

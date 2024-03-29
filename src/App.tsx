@@ -24,12 +24,6 @@ function App(): JSX.Element {
   const [isTimerExpired, setIsTimerExpired] = useState<boolean>(false);
   const [selectedTariff, setSelectedTariff] = useState<Tariff | null>(null);
 
-  const handleTariffClick = (tariff: Tariff) => {
-    setSelectedTariff(tariff);
-  };
-
-  const handleClosePopup = () => setIsPopupOpen(false);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -51,30 +45,38 @@ function App(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const totalSeconds = counter.minutes * 60 + counter.seconds;
-
-      if (totalSeconds <= 0) {
-        setIsPopupOpen(true)
-        setIsVisible(false);
-        setIsRed(false);
-        setIsTimerExpired(true);
-        return;
-      } else if (totalSeconds === 30) {
-        setIsRed(true);
-      }
-
-      const minutes = Math.floor(totalSeconds / 60);
-      const seconds = totalSeconds % 60 - 1;
-      setCounter({ minutes, seconds });
+    const timer = setInterval(() => {
+      setCounter(prevCounter => {
+        const newCounter = { ...prevCounter };
+        if (newCounter.seconds === 0) {
+          if (newCounter.minutes === 0) {
+            clearInterval(timer);
+            setIsPopupOpen(true);
+            setIsRed(false);
+            setIsVisible(false);
+            setIsTimerExpired(true);
+          } else {
+            newCounter.minutes--;
+            newCounter.seconds = 59;
+          }
+        } else {
+          newCounter.seconds--;
+          if (newCounter.minutes === 0 && newCounter.seconds === 30) {
+            setIsRed(true);
+          }
+        }
+        return newCounter;
+      });
     }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [counter, setIsPopupOpen, setIsVisible, setIsRed, setIsTimerExpired]);
-  
-  useEffect(() => {
-    setCounter({ minutes: 1, seconds: 59 });
+    return () => clearInterval(timer);
   }, []);
+
+  const handleTariffClick = (tariff: Tariff) => {
+    setSelectedTariff(tariff);
+  };
+
+  const handleClosePopup = () => setIsPopupOpen(false);
 
   return (
     <>

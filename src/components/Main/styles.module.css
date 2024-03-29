@@ -3,7 +3,6 @@ main {
     height: 100%; 
     flex-grow: 1;
     padding-bottom: clamp(0px, 107px, 107px);
-    background-color: #F5F7F7;
 }
 
 .main {

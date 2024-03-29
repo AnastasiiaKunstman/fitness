@@ -1,5 +1,5 @@
 header {
-    width: 100%;
+    width: 100vw;
     max-height: 79px;
     padding: 0.8vw 3.3vw;
     display: flex;
